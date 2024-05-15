@@ -44,15 +44,6 @@
     }
   }
 
-  ul,
-  ol {
-    @include medium-text();
-
-    a {
-      @include normal-text();
-    }
-  }
-
   ul {
     margin: 20px 0 20px 20px;
   }
@@ -137,6 +128,7 @@
       order: 2;
       height: 100%;
       padding: 0 20px 20px;
+      font-size: .9rem;
 
       > i {
         float: left;
