@@ -3,11 +3,9 @@
 ---
 ⚠️️ **NOTE VERSION 6**
 
-Version 6 is in a far progressed alpha stage. Keep in mind minor breaking changes can occur
-in future alpha updates.
+Version 6 is in a far progressed beta stage. Keep in mind minor changes can
+occur in future updates.
 Check the Github page mentioned below for updates until the first stable version 6.
-
-A few style elements have not yet been adapted to the new v6 style.
 
 ---
 

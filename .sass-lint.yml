@@ -113,7 +113,7 @@ rules:
   pseudo-element: 2
   nesting-depth:
     - 2
-    - max-depth: 4
+    - max-depth: 5
   property-sort-order:
     - 2
     - order: 'smacss'
