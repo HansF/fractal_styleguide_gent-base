@@ -17,7 +17,7 @@
 
         &:not(.active) {
           i {
-            @include theme("color", "color-primary");
+            @include theme("color", "color-primary", "link-color");
           }
         }
       }
