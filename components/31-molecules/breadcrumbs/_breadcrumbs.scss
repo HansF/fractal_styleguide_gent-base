@@ -47,8 +47,14 @@
 
         line-height: initial;
 
-        &::after {
-          content: none;
+        &,
+        &[href^="http://"],
+        &[href^="https://"] {
+          &:not(.no-icon):not(.tag) {
+            &::after {
+              content: '';
+            }
+          }
         }
       }
 
