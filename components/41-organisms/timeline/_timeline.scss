@@ -286,7 +286,6 @@ dl.timeline {
             @include desktop {
               padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
               padding-left: calc(#{$gutter-width*.5});
-              text-align: right;
               grid-area: left;
 
               .timeline-slot-title {
@@ -308,6 +307,10 @@ dl.timeline {
                     left: 100%;
                   }
                 }
+              }
+
+              .timeline-slot-date {
+                text-align: right;
               }
 
               &::after {
@@ -367,7 +370,6 @@ dl.timeline {
             @include desktop {
               padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
               padding-left: calc(#{$gutter-width*.5});
-              text-align: right;
               grid-area: left;
 
               .timeline-slot-title {
@@ -391,6 +393,10 @@ dl.timeline {
                 }
               }
 
+              .timeline-slot-date {
+                text-align: right;
+              }
+
               &::after {
                 display: none;
               }
@@ -408,6 +414,24 @@ dl.timeline {
 
           &::after {
             bottom: calc(100% - $gutter-width*.5);
+          }
+
+          .timeline-slot-title {
+            &::after {
+              @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
+
+              position: absolute;
+              top: 0;
+              right: calc(100% + 24px);
+              bottom: 50%;
+              border-left: $timeline-border solid;
+              content: '';
+              z-index: 0;
+
+              @include desktop {
+                right: calc(100% + $timeline-dt-right-padding - $timeline-border/2);
+              }
+            }
           }
         }
 
