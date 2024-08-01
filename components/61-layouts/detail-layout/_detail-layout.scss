@@ -7,7 +7,7 @@
   // Give each direct child a specific width.
   // This is a fallback width given to all children of the detail layout.
   .w7-o2,
-  > * {
+  > *:not(.timeline-wrapper):not(.roadmap-wrapper):not(.programme-wrapper) {
     @include desktop {
       @include col(7);
       @include col-offset(2);
@@ -174,10 +174,7 @@
     @include col(12);
   }
 
-  .w12,
-  > .timeline-wrapper,
-  > .programme-wrapper,
-  > .roadmap-wrapper {
+  .w12 {
     @include col(12);
     @include extra-wide;
   }
