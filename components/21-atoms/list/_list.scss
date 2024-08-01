@@ -246,6 +246,12 @@ ol {
   }
 }
 
+@for $i from 1 through 20 {
+  ol[start="#{$i}"] {
+    counter-reset: item #{$i - 1};
+  }
+}
+
 dl {
   dt,
   dd {
