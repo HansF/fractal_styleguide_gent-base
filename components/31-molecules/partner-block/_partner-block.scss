@@ -73,29 +73,16 @@
     }
 
     li {
-      flex: 1 1 calc(100% / 2 - 60px);
-      width: calc(100% /2);
-      min-width: 70px;
-      max-width: 150px;
+      width: auto;
+      height: 100px;
       margin: 0;
-
-      @include tablet {
-        flex-basis: calc(100% / 3 - 60px);
-        flex-grow: 0;
-        width: calc(100% / 3);
-      }
-
-      @include desktop {
-        flex-basis: calc(100% / 4 - 60px);
-        width: calc(100% / 4);
-        min-width: 100px;
-        max-width: 200px;
-      }
     }
   }
 
   a {
     display: block;
+    width: auto;
+    height: 100%;
     border: 0;
 
     &[href^="http://"]:not([href*="gent.be"]),
@@ -108,6 +95,8 @@
 
   figure,
   img {
+    width: auto;
     max-width: 100%;
+    height: 100%;
   }
 }
