@@ -23,7 +23,8 @@
 
     .intro {
       @include desktop {
-        min-width: 350px;
+        min-width: min-content;
+        max-width: 350px;
       }
 
       p:last-child {
