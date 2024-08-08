@@ -314,6 +314,7 @@
 ///
 @mixin focus-bare {
   @include theme('outline-color', 'color-primary', 'focus-outline');
+
   outline: 2px solid;
   outline-offset: 2px;
 }
