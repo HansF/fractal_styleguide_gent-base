@@ -560,6 +560,15 @@ dl.roadmap {
     }
   }
 
+  dd:first-child.item__content {
+    margin-top: 0;
+    padding-top: 40px;
+
+    @include desktop {
+      padding-top: 0;
+    }
+  }
+
   .content-btn {
     padding-bottom: 30px;
   }

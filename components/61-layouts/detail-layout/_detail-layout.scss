@@ -138,8 +138,16 @@
   > .timeline-wrapper {
     @include desktop {
       @include col(12);
+    }
+  }
 
-      padding: 0;
+  > .quote-wrapper,
+  > .partner-block,
+  > .roadmap-wrapper,
+  > .timeline-wrapper {
+    @include desktop {
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 
