@@ -96,6 +96,14 @@
               }
             }
           }
+
+          &:empty {
+            display: none;
+          }
+
+          &:not(:empty) {
+            width: 100%;
+          }
         }
       }
     }
@@ -114,6 +122,10 @@
     .form-columns .form-item-column {
       width: 100%;
       max-width: 800px;
+
+      &:empty {
+        display: none;
+      }
 
       .field-message {
         width: 100%;

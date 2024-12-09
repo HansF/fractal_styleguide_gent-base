@@ -27,6 +27,8 @@
           } %}
         {% endfor %}
       </div>
+
+      {% apply spaceless %}
       <div class="form-item-column">
         {% if modifier == 'error' %}
           {% include '@field-message' with {
@@ -42,6 +44,7 @@
           } %}
         {% endif %}
       </div>
+      {% endapply %}
     </div>
   </div>
 </fieldset>
