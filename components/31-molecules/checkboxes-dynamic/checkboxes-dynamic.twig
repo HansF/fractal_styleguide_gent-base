@@ -132,8 +132,9 @@
           {% endif %}
 
         </div>
-        <div class="form-item-column">
 
+        {% apply spaceless %}
+        <div class="form-item-column">
           {% if modifier == 'error' %}
             {% include '@field-message' with {
               "modifier": "error"
@@ -147,6 +148,7 @@
           {% endif %}
 
         </div>
+        {% endapply %}
       </div>
     </div>
   </fieldset>
