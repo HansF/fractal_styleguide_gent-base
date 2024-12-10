@@ -19,7 +19,7 @@
   }
 
   &.image {
-    margin-bottom: calc(100vw - 105px);
+    margin-bottom: calc(100vw - 85px);
     padding-bottom: 120px;
 
     @include tablet {
@@ -32,6 +32,14 @@
     @include desktop {
       margin-bottom: 145px;
     }
+
+    &:not(.overlap) {
+      margin-bottom: calc(100vw - 85px);
+
+      @include tablet {
+        margin-bottom: 190px;
+      }
+    }
   }
 
   &.overlap {
@@ -42,8 +50,11 @@
       flex-direction: row;
       padding-top: 80px;
       padding-bottom: 105px;
+    }
 
-      &.image {
+    &.image {
+      @include tablet {
+        margin-bottom: 165px;
         padding-bottom: 90px;
       }
     }
