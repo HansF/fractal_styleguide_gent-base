@@ -15,6 +15,10 @@
     li {
       display: inline-block;
 
+      &::before {
+        @include theme('background-color', 'color-tertiary-light');
+      }
+
       @include desktop-and-below {
         margin-bottom: 0;
       }
