@@ -231,8 +231,9 @@ ol {
     counter-increment: item;
 
     &::before {
-      @include theme('background-color', 'color-tertiary-pastel');
+      @include theme('background-color', 'color-tertiary-light');
       @include semi-bold-text;
+
       display: inline-block;
       width: 30px;
       height: 30px;
