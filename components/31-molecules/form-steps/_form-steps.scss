@@ -21,7 +21,7 @@
         margin-bottom: 0;
       }
 
-      &:not(:first-child):not(:last-child):not(.active) {
+      &:not(:first-child):not(:last-child):not(.active):not(.active + li) {
         @include desktop-and-below {
           // clip
           position: absolute;
@@ -77,7 +77,7 @@
         }
 
         &::before,
-        &::after {
+        & + li::after {
           @include desktop-and-below {
             @include theme('border-color', 'color-tertiary-pastel', 'form-step-hellip-background-color');
             @include theme('background-color', 'color-tertiary-pastel', 'form-step-hellip-background-color');
@@ -100,7 +100,7 @@
           @include theme('background-color', 'color-primary', 'form-step--active-background-color');
         }
 
-        &::after {
+        & + li:not(:nth-last-child(2)):not(:last-child)::after {
           @include desktop-and-below {
             content: '\2026';
           }
@@ -136,11 +136,10 @@
       &:nth-child(2)::before,
       &:nth-last-child(2)::after,
       &:last-child::after {
-        @include desktop-and-below {
+        @include desktop {
           content: none;
         }
       }
-
     }
   }
 

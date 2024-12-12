@@ -13,7 +13,7 @@ $roadmap-img-desktop-size: 170px;
   max-width: 375px;
 
   @include desktop {
-    max-width: 970px;
+    max-width: 1170px;
     margin: 0 auto;
   }
 }
@@ -286,10 +286,16 @@ dl.timeline {
             @include desktop {
               padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
               padding-left: calc(#{$gutter-width*.5});
-              text-align: right;
               grid-area: left;
 
               .timeline-slot-title {
+                &::after {
+                  @include desktop {
+                    right: unset;
+                    left: calc(100% + $timeline-dt-right-padding - $timeline-border/2);
+                  }
+                }
+
                 button {
                   justify-content: flex-end;
                   margin: 0 0 0 55px;
@@ -308,6 +314,11 @@ dl.timeline {
                     left: 100%;
                   }
                 }
+              }
+
+              .timeline-slot-title button,
+              .timeline-slot-date {
+                text-align: right;
               }
 
               &::after {
@@ -367,7 +378,6 @@ dl.timeline {
             @include desktop {
               padding-right: calc(#{$timeline-dt-left-padding} + #{$timeline-dt-right-padding});
               padding-left: calc(#{$gutter-width*.5});
-              text-align: right;
               grid-area: left;
 
               .timeline-slot-title {
@@ -391,6 +401,11 @@ dl.timeline {
                 }
               }
 
+              .timeline-slot-title button,
+              .timeline-slot-date {
+                text-align: right;
+              }
+
               &::after {
                 display: none;
               }
@@ -408,6 +423,24 @@ dl.timeline {
 
           &::after {
             bottom: calc(100% - $gutter-width*.5);
+          }
+
+          .timeline-slot-title {
+            &::after {
+              @include theme('border-color', 'color-tertiary-pastel', 'timeline-line-color');
+
+              position: absolute;
+              top: 0;
+              right: calc(100% + 24px);
+              bottom: 50%;
+              border-left: $timeline-border solid;
+              content: '';
+              z-index: 0;
+
+              @include desktop {
+                right: calc(100% + $timeline-dt-right-padding - $timeline-border/2);
+              }
+            }
           }
         }
 
@@ -451,21 +484,27 @@ dl.roadmap {
       @include theme('background-color', 'color-secondary', 'timeline-dt-bg-color');
       @include bold-text;
 
+      display: flex;
       position: absolute;
       top: 30px;
       left: 0;
-      padding: 9.5px 19px;
+      align-items: center;
+      justify-content: center;
+      min-width: 50px;
+      min-height: 50px;
       border-radius: 50%;
       font-size: 1.2rem;
       line-height: 130%;
       content: counter(item);
       z-index: 2;
+      aspect-ratio: 1 / 1;
       counter-increment: item;
 
       @include desktop {
         top: 50px;
         left: calc($roadmap-img-desktop-size + 30px);
-        padding: 15.5px 28px;
+        min-width: 70px;
+        min-height: 70px;
         font-size: 1.5rem;
       }
     }
@@ -524,6 +563,15 @@ dl.roadmap {
       width: $roadmap-img-desktop-size;
       height: $roadmap-img-desktop-size;
       margin-top: 20px;
+    }
+  }
+
+  dd:first-child.item__content {
+    margin-top: 0;
+    padding-top: 40px;
+
+    @include desktop {
+      padding-top: 0;
     }
   }
 

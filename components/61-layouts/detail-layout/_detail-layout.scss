@@ -131,17 +131,29 @@
     }
   }
 
-  > .partner-block {
+  > .quote-wrapper,
+  > .partner-block,
+  > .roadmap-wrapper,
+  > .programme-wrapper,
+  > .timeline-wrapper {
     @include desktop {
       @include col(12);
     }
   }
 
-  > .quote-wrapper {
+  > .quote-wrapper,
+  > .partner-block,
+  > .roadmap-wrapper,
+  > .timeline-wrapper {
     @include desktop {
-      @include col(12);
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 
-      > .quote {
+  > .quote-wrapper {
+    > .quote {
+      @include tablet {
         @include col(7);
         @include col-offset(4);
       }
@@ -174,10 +186,7 @@
     @include col(12);
   }
 
-  .w12,
-  > .timeline-wrapper,
-  > .programme-wrapper,
-  > .roadmap-wrapper {
+  .w12 {
     @include col(12);
     @include extra-wide;
   }
