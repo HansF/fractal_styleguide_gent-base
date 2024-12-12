@@ -81,6 +81,8 @@
         Select ...
       </button>
     </div>
+
+    {% apply spaceless %}
     <div class="form-item-column">
       {% if modifier == 'error' %}
         {% include '@field-message' with {
@@ -93,5 +95,6 @@
         } %}
       {% endif %}
     </div>
+    {% apply spaceless %}
   </div>
 </fieldset>

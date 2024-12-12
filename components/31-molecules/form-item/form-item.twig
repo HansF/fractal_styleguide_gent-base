@@ -28,6 +28,7 @@
         "modifier": modifier
       }%}
     </div>
+    {% apply spaceless %}
     <div class="form-item-column">
       {% if field_message %}
         {% include '@field-message' with {
@@ -36,5 +37,6 @@
         } %}
       {% endif %}
     </div>
+    {% endapply %}
   </div>
 </div>

@@ -62,9 +62,10 @@ rules:
   no-misspelled-properties:
     - 2
     - extra-properties:
-      - 'gap'
+      - 'aspect-ratio'
       - 'container-type'
       - '*font-family'
+      - 'gap'
       - '*height'
       - 'interpolation-mode'
       - '*margin-left'

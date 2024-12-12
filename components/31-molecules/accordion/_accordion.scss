@@ -8,9 +8,9 @@
     @include icon(chevron-down);
 
     position: relative;
-    padding-right: 1.6rem;
+    padding-right: 32px;
     color: inherit;
-    line-height: 1.3rem;
+    line-height: 26px;
     text-align: left;
 
     &::before {
@@ -64,7 +64,13 @@ dl.accordion {
 
   li {
     h3 {
-      margin: 1rem 0;
+      margin: 20px 0;
+    }
+
+    &:first-child {
+      h3 {
+        margin-top: 0;
+      }
     }
   }
 
@@ -81,10 +87,10 @@ dl.accordion {
       position: relative;
       right: auto;
       left: 0;
-      min-width: 1.8rem;
-      min-height: 1.8rem;
-      margin: 0 .75rem 0 0;
-      padding: .13rem .25rem;
+      min-width: 36px;
+      min-height: 36px;
+      margin: 0 15px 0 0;
+      padding: 2.5px 5px;
       transition: transform .2s ease-out-in-out;
       font-size: 1.2rem;
       text-align: left;
@@ -134,6 +140,7 @@ dl.accordion {
     @include semi-bold-text;
 
     width: auto;
+    margin-bottom: 20px;
     line-height: 120%;
     vertical-align: middle;
 

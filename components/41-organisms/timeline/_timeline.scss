@@ -13,7 +13,7 @@ $roadmap-img-desktop-size: 170px;
   max-width: 375px;
 
   @include desktop {
-    max-width: 970px;
+    max-width: 1170px;
     margin: 0 auto;
   }
 }
@@ -484,21 +484,27 @@ dl.roadmap {
       @include theme('background-color', 'color-secondary', 'timeline-dt-bg-color');
       @include bold-text;
 
+      display: flex;
       position: absolute;
       top: 30px;
       left: 0;
-      padding: 9.5px 19px;
+      align-items: center;
+      justify-content: center;
+      min-width: 50px;
+      min-height: 50px;
       border-radius: 50%;
       font-size: 1.2rem;
       line-height: 130%;
       content: counter(item);
       z-index: 2;
+      aspect-ratio: 1 / 1;
       counter-increment: item;
 
       @include desktop {
         top: 50px;
         left: calc($roadmap-img-desktop-size + 30px);
-        padding: 15.5px 28px;
+        min-width: 70px;
+        min-height: 70px;
         font-size: 1.5rem;
       }
     }
