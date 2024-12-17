@@ -470,6 +470,12 @@ dl.timeline {
 dl.roadmap {
   counter-reset: item;
 
+  .roadmap-title {
+    @include desktop {
+      padding-left: calc($roadmap-img-desktop-size + 30px);
+    }
+  }
+
   .timeline-slot {
     position: relative;
     padding-bottom: 50px;
