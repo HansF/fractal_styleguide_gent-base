@@ -96,6 +96,7 @@ const icons = [
   'share',
   'shopping',
   'sign-language',
+  'sign-out',
   'size',
   'spoken-language',
   'sportclub',
