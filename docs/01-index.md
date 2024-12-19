@@ -1,17 +1,8 @@
 # City of Ghent Style Guide
 
----
-⚠️️ **NOTE VERSION 6**
-
-Version 6 is in a far progressed beta stage. Keep in mind minor changes can
-occur in future updates.
-Check the Github page mentioned below for updates until the first stable version 6.
-
----
-
 ## Versioning and releases
 
-We plan biannual releases, please see our
+We plan continuous releases with improvements, please see our
 [versioning and releases page]({{path '/docs/versioning-and-releases'}}) for details.  
 The changelog is available through our [GitHub repo](https://github.com/StadGent/fractal_styleguide_gent-base/)
 or on our [changelog page]({{path '/docs/changelog'}}).  
