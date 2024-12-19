@@ -3,21 +3,21 @@
 All notable changes to this style guide are documented here.
 
 
-## [6.x-dev unreleased]
+## [6.0.0]
 
-* New Stad Gent style. View all markup changes below. Always look up
-the mentioned elements in the styleguide to see the new HTML markup.
+**New Stad Gent style. View all markup changes below. Always look up
+the mentioned elements in the styleguide to see the new HTML markup.**
 
-## New mixins
+## Added
 
-### theme-body()
+### theme-body() (mixin)
 
 The themify `theme()` function creates style selectors like this:
 ```css
 .cs--blue .original-selector .child ... {}
 ```
 
-Where cs--blue is the theme color and that class is added to the <body> element.
+Where `.cs--blue` is the theme color and this class is added to the <body> element.
 
 But sometimes the `.original-selector` is a body class which is not supported by
 the `theme()` function.
@@ -27,23 +27,25 @@ selector:
 .cs--blue.original-selector .child ... {}
 ```
 
-### Accolade element
+### Accolade element (mixin)
 `@include accolade;`
 
 Add an outside accolade to an element and add a color to it.
 
-### Abstract shadow
+### Abstract shadow (mixin)
 `@include abstract-shadow;`
 
 Add an underlying container of the same size under the chosen element.
 For example the highlight molecule.
 
-### Icon-right
+### Icon-right (mixin)
 `@include button-icon-right;`
 
 Also added the `.icon-right` class for icons that are on the right-hand side.
 
-## HTML markup changes
+## Changed (HTML markup)
+**Follow these markup changes in your project to have CSS applied flawlessly.**
+
 ### Legends
 **Added legend-title class**
 The legend now has a `<span class="legend-title">` around the text/title/label
@@ -58,7 +60,7 @@ Changed `<input>` to `<button>`. This is important to be able to use the hover e
 education, environment, for-children, fullscreen-enter, fullscreen-exit, ghent,
 health, info-circle, layers, link, living, map, mobility, music, next, pause,
 pinterest, play, previous, question, question-circle, refresh, settings,
-shopping, sign-language, spoken-language, stop, tag, target, threads, uitpas, 
+shopping, sign-language, sign-out, spoken-language, stop, tag, target, threads, uitpas, 
 uit-met-vlieg, view-grid, view-list, virus, whatsapp, wheelchair-no, work.
 
 Some icons have been updated, using the same machine name.
@@ -161,7 +163,6 @@ Becomes
 <span>Show all photos <i class="icon-fullscreen-enter" aria-hidden="true"></i></span>
 ```
 
-
 ### Contact details organism
 Not based on Highlight molecule anymore.
 The HTML markup has been simplified.
@@ -173,7 +174,6 @@ The HTML markup has been simplified.
 The links get a `no-icon` class.
 
 Add the `.contact-details--with-image` class to the contact-details section if you want to remove the side margins and set it to full width.
-
 
 ### Footer organism
 * Titles become `h4` except Gentinfo title stays `h3`.
@@ -188,10 +188,10 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 * The newsletter block does not use highlight block anymore, instead it uses the
   new feature-block markup.
 
-
 ### Filter layout
 * "You have selected" and "Found results" is normal text instead of `h2`.
 * The left sidebar title changed from `h2` to `h3`.
+
 
 ## [5.x and older]
 
@@ -200,4 +200,5 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.7...6.0.0
 [5.x and older]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.x...6.x

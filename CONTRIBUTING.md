@@ -11,7 +11,7 @@ ways to help out, even if you've never worked on an open source project before.
 
 > Note that the development of this style guide is not done here. So
 > please do not create any pull requests directly here.
-> Instead use [this repo](https://github.com/digipolisgent/drupal_theme_gent-base)
+> Instead use [this repo](https://github.com/StadGent/drupal_theme_gent-base)
 > to create your pull requests.
 
 If you've found a bug or want to request a feature, you can report it by
@@ -32,7 +32,7 @@ following checklist:
 * **FILL IN ALL THE FIELDS ASKED FOR**
 * Search through existing issues (*including closed issues!*) first: you might
   be able to get your answer there.
-* Double check your issue manually, because it could be an external issue.
+* Double-check your issue manually, because it could be an external issue.
 * What providers are you using?
 * If you post logs, please use pastebin or github gist to store them!
 * Give a short step by step of how to reproduce the error.
