@@ -3,7 +3,7 @@
 All notable changes to this style guide are documented here.
 
 
-## [6.0.0]
+## [6.0.1]
 
 **New Stad Gent style. View all markup changes below. Always look up
 the mentioned elements in the styleguide to see the new HTML markup.**
@@ -54,9 +54,9 @@ The legend now has a `<span class="legend-title">` around the text/title/label
 Changed `<input>` to `<button>`. This is important to be able to use the hover effect in combination with an icon.
 
 ### Icon atom
-**Removed icons:** external-link, fancyback
+**Removed icons:** external-link, fancyback, twitter/X
 
-**Added icons:** basket, civil-affairs, contact, cross-circle, culture,
+**Added icons:** basket, bluesky civil-affairs, contact, cross-circle, culture,
 education, environment, for-children, fullscreen-enter, fullscreen-exit, ghent,
 health, info-circle, layers, link, living, map, mobility, music, next, pause,
 pinterest, play, previous, question, question-circle, refresh, settings,
