@@ -111,6 +111,8 @@ const icons = [
   'threads',
   'tiktok',
   'trashcan',
+  'twitter-outline',
+  'twitter',
   'uit-met-vlieg',
   'uitpas',
   'update',

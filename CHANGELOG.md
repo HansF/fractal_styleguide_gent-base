@@ -4,17 +4,20 @@ All notable changes to this style guide are documented here.
 
 ## [6.0.2]
 
-## Changed (HTML)
+### Added
+- SGD8-2949: Added icons for Bluesky and Threads
 
-### Icon atom
-
-**Added icons:** Bluesky, Threads
-
-**Removed icons:** Twitter/Twitter outline (X)
+### Fixed
+- STIJ-444: Fix disabled button styling that was overwritten for submit buttons
 
 ## [6.0.1]
+### Added
+- SGD8-2581: Added space under opening-hours day element
+- SGD8-2548: Added figcaption margins to cta block
 
-**No HTML changes**
+### Fixed
+- SGD8-2482: Fixed error messages in forms + select size
+- SGD8-2604: Fixed first and second item nr in steps
 
 ## [6.0.0]
 
