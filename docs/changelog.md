@@ -2,6 +2,22 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.2]
+
+### Added
+- SGD8-2949: Added icons for Bluesky and Threads
+
+### Fixed
+- STIJ-444: Fix disabled button styling that was overwritten for submit buttons
+
+## [6.0.1]
+### Added
+- SGD8-2581: Added space under opening-hours day element
+- SGD8-2548: Added figcaption margins to cta block
+
+### Fixed
+- SGD8-2482: Fixed error messages in forms + select size
+- SGD8-2604: Fixed first and second item nr in steps
 
 ## [6.0.0]
 
@@ -60,7 +76,7 @@ Changed `<input>` to `<button>`. This is important to be able to use the hover e
 education, environment, for-children, fullscreen-enter, fullscreen-exit, ghent,
 health, info-circle, layers, link, living, map, mobility, music, next, pause,
 pinterest, play, previous, question, question-circle, refresh, settings,
-shopping, sign-language, sign-out, spoken-language, stop, tag, target, threads, uitpas, 
+shopping, sign-language, sign-out, spoken-language, stop, tag, target, uitpas, 
 uit-met-vlieg, view-grid, view-list, virus, whatsapp, wheelchair-no, work.
 
 Some icons have been updated, using the same machine name.
