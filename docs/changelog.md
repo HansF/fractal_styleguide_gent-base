@@ -216,5 +216,6 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.0...6.0.1
 [6.0.0]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.1.7...6.0.0
 [5.x and older]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/5.x...6.x
