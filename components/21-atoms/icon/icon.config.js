@@ -13,6 +13,7 @@ const icons = [
   'arrow-right-top',
   'arrow-up',
   'basket',
+  'bluesky',
   'broken-link',
   'cart',
   'calendar',
