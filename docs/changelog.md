@@ -9,6 +9,7 @@ All notable changes to this style guide are documented here.
 
 ### Fixed
 - STIJ-444: Fix disabled button styling that was overwritten for submit buttons
+- SGD8-2548: Fix figcaption width for large figcaptions
 
 ## [6.0.1]
 ### Added
