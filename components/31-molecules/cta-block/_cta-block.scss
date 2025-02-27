@@ -30,8 +30,12 @@
   }
 
   .cta-block__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
     @include phablet {
-      flex-shrink: .3;
+      flex-shrink: .4;
     }
 
     @include desktop {
@@ -89,11 +93,8 @@
 
         .feature-block {
           width: calc(100% + 60px);
+          margin-right: 20px;
         }
-      }
-
-      .feature-block {
-        margin-right: 20px;
       }
     }
   }
