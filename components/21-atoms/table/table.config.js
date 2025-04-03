@@ -103,7 +103,7 @@ const generateTable = (columnHeaders, rowHeaders, rows = 10, cols = 6) => {
     table.rows.push(tr);
   }
 
-  // Building columns
+  // Building columns.
   for (let col = 0; col < cols; col++) {
     let column = {
       header: columnHeaders ? table.rows[0].cells[col] : null,

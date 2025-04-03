@@ -5,7 +5,7 @@ All notable changes to this style guide are documented here.
 ## [6.0.4]
 
 ### Changed
-- SGD8-2287: Changed tables' mobile theming to use swiper for 2nd column and onwards. 
+- SGD8-2287: Changed tables' mobile theming to use swiper for 2nd column and onwards (`<table>` markup changes because of this).
 
 ## [6.0.3]
 
