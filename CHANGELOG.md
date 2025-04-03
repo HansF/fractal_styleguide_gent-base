@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.4]
+
+### Changed
+- SGD8-2287: Changed tables' mobile theming to use swiper for 2nd column and onwards. 
+
 ## [6.0.3]
 
 ### Fixed
@@ -222,6 +227,7 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.4]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.3...6.0.4
 [6.0.3]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.2...6.0.3
 [6.0.2]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.1...6.0.2
 [6.0.1]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.0...6.0.1
