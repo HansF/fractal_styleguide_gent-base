@@ -69,10 +69,10 @@
     "node": ">=10.14.2"
   },
   "scripts": {
-    "test": "gulp validate && gulp axe",
     "postinstall": "node ./scripts/postinstall.js",
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "test": "gulp validate && gulp axe:input && gulp axe:layout && gulp axe:components"
   },
   "files": [
     "scripts/postinstall.js",
