@@ -1,11 +1,49 @@
 <div class="accordion--link dropdown--link">
-    <button aria-controls="accordion--link--single--content--{{ loopNumber }}" type="button" class="accordion--button accordion--link--button" aria-expanded="false" >
+    <button aria-controls="accordion--link--single--content--{{ loopNumberLink }}" type="button" class="accordion--button accordion--link--button" aria-expanded="false" >
         {{ buttonText }}
         {% include '@icon' with { "icon": "chevron-down" } %}
     </button>
-    <div id="accordion--link--single--content--{{ loopNumber }}" class="accordion--link--content" aria-hidden="true" hidden="hidden">
+    <div id="accordion--link--single--content--{{ loopNumberLink }}" class="accordion--link--content" aria-hidden="true" hidden="hidden">
         {% include '@accordion--multiple' with {
-            items: faqs
+            items: [
+                {
+                    'loopNumber': 1,
+                    'buttonText': 'First item',
+                    'content': '<p>Multiple item accordions are contained in a list element.</p>' ~
+                    '<p>They are indicated with a \'plus\' or \'minus\' icon</p>' ~
+                    '<p>Below is some nonsens text.</p>' ~
+                    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+                    'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+                    'temporibus voluptatem!</p>'
+                },
+                {
+                    'loopNumber': 2,
+                    'buttonText': 'Second item',
+                    'content': '<p>Single item accordions are indicated by a chevron.</p>' ~
+                    '<p>Below is some nonsens text.</p>' ~
+                    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+                    'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+                    'temporibus voluptatem!</p>'
+                },
+                {
+                    'loopNumber': 3,
+                    'buttonText': 'Third item',
+                    'content': '<p>Single item accordions are indicated by a chevron.</p>' ~
+                    '<p>Below is some nonsens text.</p>' ~
+                    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+                    'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+                    'temporibus voluptatem!</p>'
+                },
+                {
+                    'loopNumber': 4,
+                    'buttonText': 'Fourth item',
+                    'content': '<p>Single item accordions are indicated by a chevron.</p>' ~
+                    '<p>Below is some nonsens text.</p>' ~
+                    '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' ~
+                    'Animi culpa dolorum enim molestiae molestias nemo nulla quas sed, ' ~
+                    'temporibus voluptatem!</p>'
+                }
+            ]
         } %}
     </div>
 </div>
