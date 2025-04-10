@@ -1,4 +1,4 @@
-/* global ResponsiveTable, Swiper, equalizeTableSwiperHeights */
+/* global bindings for ResponsiveTable, Swiper, equalizeTableSwiperHeights. */
 'use strict';
 
 (function () {
@@ -11,7 +11,7 @@
     });
   }
 
-  // Initialize each Swiper separately
+  // Initialize each Swiper separately.
   document.querySelectorAll('.table-swiper-wrapper .swiper').forEach((swiperElement, index) => {
     const swiperWrapper = swiperElement.closest('.table-swiper-wrapper');
     const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
@@ -36,7 +36,7 @@
           if (typeof equalizeTableSwiperHeights === 'function') {
             equalizeTableSwiperHeights();
           }
-          // fallback update na render
+          // fallback update after render.
           setTimeout(() => this.update(), 100);
         },
         resize: function () {
