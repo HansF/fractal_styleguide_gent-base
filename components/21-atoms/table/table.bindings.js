@@ -1,4 +1,4 @@
-/* global bindings for ResponsiveTable, Swiper, equalizeTableSwiperHeights. */
+// Global bindings for ResponsiveTable, Swiper, equalizeTableSwiperHeights.
 'use strict';
 
 (function () {
@@ -6,7 +6,7 @@
 
   for (let i = 0; i < tablesNodeList.length; i++) {
     const table = tablesNodeList[i];
-    new ResponsiveTable(table, {
+    new ResponsiveTable(table, { // eslint-disable-line no-undef
       scrollableText: '(scroll to see more)'
     });
   }
@@ -18,7 +18,7 @@
     const nextEl = swiperWrapper.querySelector('.swiper-button-next');
     const prevEl = swiperWrapper.querySelector('.swiper-button-prev');
 
-    new Swiper(swiperElement, {
+    new Swiper(swiperElement, { // eslint-disable-line no-undef
       slidesPerView: 'auto',
       spaceBetween: 0,
       loop: true,
@@ -34,14 +34,14 @@
       on: {
         init: function () {
           if (typeof equalizeTableSwiperHeights === 'function') {
-            equalizeTableSwiperHeights();
+            equalizeTableSwiperHeights(); // eslint-disable-line no-undef
           }
           // fallback update after render.
           setTimeout(() => this.update(), 100);
         },
         resize: function () {
           if (typeof equalizeTableSwiperHeights === 'function') {
-            equalizeTableSwiperHeights();
+            equalizeTableSwiperHeights(); // eslint-disable-line no-undef
           }
         }
       }
@@ -49,7 +49,7 @@
   });
 
   if (typeof equalizeTableSwiperHeights === 'function') {
-    window.addEventListener('load', equalizeTableSwiperHeights);
-    window.addEventListener('resize', equalizeTableSwiperHeights);
+    window.addEventListener('load', equalizeTableSwiperHeights); // eslint-disable-line no-undef
+    window.addEventListener('resize', equalizeTableSwiperHeights); // eslint-disable-line no-undef
   }
 })();
