@@ -2,7 +2,7 @@
 
 All notable changes to this style guide are documented here.
 
-## [6.0.4] unreleased
+## [6.0.4]
 
 ### Added
 - SDG8-2888: Added styling for titles inside list-items
