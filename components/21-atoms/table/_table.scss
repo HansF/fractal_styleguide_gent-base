@@ -18,6 +18,7 @@ div.responsive-table {
   @include tablet {
     display: block;
     max-width: 100%;
+    overflow: hidden;
   }
 
   .table-wrapper {
@@ -136,11 +137,13 @@ div.table-swiper-wrapper {
     dt,
     dd {
       display: block;
+      width: 100%;
       padding: 20px;
     }
 
     .swiper {
-      width: calc(100vw - #{$fixed-col-width});
+      width: calc(100vw - #{$fixed-col-width} - 40px);
+      margin-right: 0;
       margin-left: 0;
       padding-left: 0;
       overflow: hidden;
