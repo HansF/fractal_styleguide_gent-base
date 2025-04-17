@@ -17,11 +17,12 @@
     const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
     const nextEl = swiperWrapper.querySelector('.swiper-button-next');
     const prevEl = swiperWrapper.querySelector('.swiper-button-prev');
+    const slideCount = swiperElement.querySelectorAll('.swiper-slide').length;
 
     new Swiper(swiperElement, { // eslint-disable-line no-undef
       slidesPerView: 'auto',
       spaceBetween: 0,
-      loop: true,
+      loop: slideCount > 1,
       pagination: {
         el: paginationEl,
         type: 'bullets',
