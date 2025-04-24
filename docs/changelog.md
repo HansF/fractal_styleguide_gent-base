@@ -5,6 +5,11 @@ All notable changes to this style guide are documented here.
 ## [6.0.6]
 
 ### Fixed
+- SGD8-2982: Fixed corrupted font files.
+
+## [6.0.6]
+
+### Fixed
 - SGD8-2982: Fixed broken WOFF2 font files in base fonts.
 
 ## [6.0.5]
