@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('Fira Sans'),
-  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.woff2') format('woff2');
+  url('#{$styleguide-dir}/googlefonts/firasans-regular-webfont.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -23,7 +23,7 @@
   font-style: normal;
   font-weight: 600;
   src: local('Fira Sans'),
-  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.woff2') format('woff2');
+  url('#{$styleguide-dir}/googlefonts/firasans-semibold-webfont.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -33,7 +33,7 @@
   font-style: normal;
   font-weight: 700;
   src: local('Fira Sans'),
-  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.woff2') format('woff2');
+  url('#{$styleguide-dir}/googlefonts/firasans-bold-webfont.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 800;
   src: local('Fira Sans'),
-  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.woff2') format('woff2');
+  url('#{$styleguide-dir}/googlefonts/firasans-extrabold-webfont.woff2') format('woff2');
   font-display: swap;
 }
 
