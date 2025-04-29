@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+### Fixed
+- SGD8-2581: Fixed empty opening hours widgets' margin.
+
 ## [6.0.7]
 
 ### Fixed
