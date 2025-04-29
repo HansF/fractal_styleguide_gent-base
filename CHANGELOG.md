@@ -4,6 +4,9 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+### Added
+- SGD8-2986: Add CSS hyphenation to teasers.
+
 ### Fixed
 - SGD8-2581: Fixed empty opening hours widgets' margin.
 
