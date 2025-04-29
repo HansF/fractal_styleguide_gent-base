@@ -468,6 +468,14 @@ gulp.task('iconfont', () => {
 });
 
 /**
+ * Copy fonts to build folder without transforming them.
+ */
+gulp.task('fonts', () => {
+  return gulp.src('./public/styleguide/googlefonts/**/*')
+      .pipe(gulp.dest('./build/styleguide/googlefonts/'));
+});
+
+/**
  * Create spot images.
  *
  * Usage:
@@ -669,7 +677,8 @@ gulp.task('compile', gulp.series(
     'styles:dist',
     'js:build',
     'js:dist',
-    'images:minify'
+    'images:minify',
+    'fonts'
   ),
   'styles:extract',
   'styles:inject'
