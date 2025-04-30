@@ -2,6 +2,16 @@
 
 All notable changes to this style guide are documented here.
 
+## [Unreleased]
+
+## Removed
+- SGD8-2982: Removed new styling and reverted to old.
+
+## [6.0.11]
+
+## Added
+- SGD8-2982: Added WOFF font files for fallback on servers without font/woff2 MIME-type.
+
 ## [6.0.10]
 
 ## Added
@@ -270,6 +280,8 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.11...6.0.12
+[6.0.11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.10...6.0.11
 [6.0.10]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.9...6.0.10
 [6.0.9]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.8...6.0.9
 [6.0.8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.7...6.0.8
