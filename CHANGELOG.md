@@ -2,7 +2,15 @@
 
 All notable changes to this style guide are documented here.
 
-## [Unreleased]
+## [6.0.9]
+
+## Fixed
+- - SGD8-2982: Fixed faulty copying of font files with gulp task.
+
+## [6.0.8]
+
+### Added
+- SGD8-2986: Add CSS hyphenation to teasers.
 
 ### Fixed
 - SGD8-2581: Fixed empty opening hours widgets' margin.
@@ -257,6 +265,8 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.8...6.0.9
+[6.0.8]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.7...6.0.8
 [6.0.7]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.6...6.0.7
 [6.0.6]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.5...6.0.6
 [6.0.5]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.4...6.0.5
