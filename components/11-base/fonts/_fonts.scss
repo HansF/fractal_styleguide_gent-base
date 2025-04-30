@@ -12,9 +12,13 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Fira Sans Regular'), local('FiraSans-Regular'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-Regular.woff?v2') format('woff'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-Regular.woff2?v2') format('woff2');
+  src: url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.eot'),
+  local('Fira Sans'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.woff2') format('woff2'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.woff') format('woff'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.ttf') format('truetype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-regular.svg#FiraSans') format('svg');
   font-display: swap;
 }
 
@@ -23,9 +27,13 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 600;
-  src: local('Fira Sans SemiBold'), local('FiraSans-SemiBold'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-SemiBold.woff?v2') format('woff'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-SemiBold.woff2?v2') format('woff2');
+  src: url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.eot'),
+  local('Fira Sans'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.eot?#iefix') format('embedded-opentype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.woff2') format('woff2'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.woff') format('woff'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.ttf') format('truetype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-600.svg#FiraSans') format('svg');
   font-display: swap;
 }
 
@@ -34,9 +42,13 @@
   font-family: 'Fira Sans';
   font-style: normal;
   font-weight: 700;
-  src: local('Fira Sans Bold'), local('FiraSans-Bold'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-Bold.woff?v2') format('woff'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-Bold.woff2?v2') format('woff2');
+  src: url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.eot'),
+  local('Fira Sans'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.eot?#iefix') format('embedded-opentype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.woff2') format('woff2'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.woff') format('woff'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.ttf') format('truetype'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-700.svg#FiraSans') format('svg');
   font-display: swap;
 }
 
@@ -46,8 +58,8 @@
   font-style: normal;
   font-weight: 800;
   src: local('Fira Sans ExtraBold'), local('FiraSans-ExtraBold'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-ExtraBold.woff?v2') format('woff'),
-  url('#{$styleguide-dir}/googlefonts/FiraSans-ExtraBold.woff2?v2') format('woff2');
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.woff') format('woff'),
+  url('#{$styleguide-dir}/googlefonts/fira-sans-v16-latin-ext_latin-800.woff2') format('woff2');
   font-display: swap;
 }
 
