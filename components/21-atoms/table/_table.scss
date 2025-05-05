@@ -153,12 +153,15 @@ div.table-swiper-wrapper {
     .swiper-wrapper {
       display: flex;
       width: 100%;
+      margin: 0;
+      padding: 0;
       gap: 0;
       box-sizing: border-box;
     }
 
     .swiper-slide {
       width: auto;
+      max-width: 190px;  // = 360px - 2 x 20px - 130px (for fixed column).
       margin-right: -1px;
     }
 
@@ -232,13 +235,6 @@ div.table-swiper-wrapper {
   }
 
   dd {
-    @include theme('background-color', 'color-none', 'table-row-color');
-    @include theme('border-color', 'color-none', 'table-row-color');
-
-    &.row-even {
-      @include theme('background-color', 'color-secondary-light', 'table-row-color');
-      @include theme('border-color', 'color-secondary-light', 'table-row-color');
-    }
 
     &:nth-of-type(n) {
       @include table-backgrounds();

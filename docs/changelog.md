@@ -4,6 +4,9 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+### Fixed
+- SGD8-2287: Fixed table max-width on mobile.
+
 ## Changed
 - SGD8-2965: Changed overlap spacing for content headers with img overlap.
 
