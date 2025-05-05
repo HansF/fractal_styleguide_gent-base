@@ -4,6 +4,9 @@ All notable changes to this style guide are documented here.
 
 ## [Unreleased]
 
+## Changed
+- SGD8-2965: Changed overlap spacing for content headers with img overlap.
+
 ## Removed
 - SGD8-2982: Removed new fonts styling and reverted to old styling with eot and old font files.
 
