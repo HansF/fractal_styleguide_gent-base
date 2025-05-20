@@ -2,17 +2,56 @@
 'use strict';
 
 (function () {
-  const tablesNodeList = document.querySelectorAll('.responsive-table .table-wrapper');
+  /**
+   * Sets equal heights for cells in each row across fixed and swiper columns.
+   */
+  function equalizeTableSwiperHeights() {
+    document.querySelectorAll('.table-swiper-wrapper').forEach(function (wrapper) {
+      const rowMap = {};
 
-  for (let i = 0; i < tablesNodeList.length; i++) {
-    const table = tablesNodeList[i];
-    new ResponsiveTable(table, { // eslint-disable-line no-undef
-      scrollableText: '(scroll to see more)'
+      // Gather cells per data-row-index.
+      wrapper.querySelectorAll('.cell-row[data-row-index]').forEach(function (el) {
+        const index = el.getAttribute('data-row-index');
+        if (!rowMap[index]) {
+          rowMap[index] = [];
+        }
+        rowMap[index].push(el);
+      });
+
+      // Reset existing heights.
+      Object.keys(rowMap).forEach(function (key) {
+        rowMap[key].forEach(function (cell) {
+          cell.style.height = '';
+        });
+      });
+
+      // Set max height per row.
+      Object.keys(rowMap).forEach(function (key) {
+        const maxHeight = Math.max.apply(null, rowMap[key].map(function (el) {
+          return el.offsetHeight;
+        }));
+        rowMap[key].forEach(function (cell) {
+          cell.style.height = maxHeight + 'px';
+        });
+      });
+
+      // Set equal heights of .column-header elements.
+      const headers = wrapper.querySelectorAll('.column-header');
+      if (headers.length > 0) {
+        // Reset hoogtes
+        headers.forEach(function (el) {
+          el.style.height = '';
+        });
+        const maxHeaderHeight = Math.max.apply(null, Array.from(headers).map(el => el.offsetHeight));
+        headers.forEach(function (el) {
+          el.style.height = maxHeaderHeight + 'px';
+        });
+      }
     });
   }
 
-  // Initialize each Swiper separately.
-  document.querySelectorAll('.table-swiper-wrapper .swiper').forEach((swiperElement, index) => {
+  // Initialise each Swiper separately.
+  document.querySelectorAll('.table-swiper-wrapper .swiper').forEach(function (swiperElement) {
     const swiperWrapper = swiperElement.closest('.table-swiper-wrapper');
     const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
     const nextEl = swiperWrapper.querySelector('.swiper-button-next');
@@ -34,23 +73,17 @@
       },
       on: {
         init: function () {
-          if (typeof equalizeTableSwiperHeights === 'function') {
-            equalizeTableSwiperHeights(); // eslint-disable-line no-undef
-          }
-          // fallback update after render.
+          equalizeTableSwiperHeights();
           setTimeout(() => this.update(), 100);
         },
         resize: function () {
-          if (typeof equalizeTableSwiperHeights === 'function') {
-            equalizeTableSwiperHeights(); // eslint-disable-line no-undef
-          }
+          equalizeTableSwiperHeights();
         }
       }
     });
   });
 
-  if (typeof equalizeTableSwiperHeights === 'function') {
-    window.addEventListener('load', equalizeTableSwiperHeights); // eslint-disable-line no-undef
-    window.addEventListener('resize', equalizeTableSwiperHeights); // eslint-disable-line no-undef
-  }
+  // Extra security with (re)loading or resize.
+  window.addEventListener('load', equalizeTableSwiperHeights);
+  window.addEventListener('resize', equalizeTableSwiperHeights);
 })();
