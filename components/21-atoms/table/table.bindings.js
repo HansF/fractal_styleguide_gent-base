@@ -2,6 +2,7 @@
 'use strict';
 
 (function () {
+  
   /**
    * Sets equal heights for cells in each row across fixed and swiper columns.
    */
