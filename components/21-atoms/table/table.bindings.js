@@ -2,17 +2,85 @@
 'use strict';
 
 (function () {
-  const tablesNodeList = document.querySelectorAll('.responsive-table .table-wrapper');
 
-  for (let i = 0; i < tablesNodeList.length; i++) {
-    const table = tablesNodeList[i];
-    new ResponsiveTable(table, { // eslint-disable-line no-undef
-      scrollableText: '(scroll to see more)'
+  /**
+   * Reset heights for all elements in the given row map.
+   *
+   * @param {Object} rowMap - A map of data-row-index to an array of DOM elements.
+   */
+  function resetRowHeights(rowMap) {
+    Object.keys(rowMap).forEach(function (key) {
+      rowMap[key].forEach(function (cell) {
+        cell.style.height = '';
+      });
     });
   }
 
-  // Initialize each Swiper separately.
-  document.querySelectorAll('.table-swiper-wrapper .swiper').forEach((swiperElement, index) => {
+  /**
+   * Set maximum height per row based on the row map.
+   *
+   * @param {Object} rowMap - A map of data-row-index to an array of DOM elements.
+   */
+  function setMaxRowHeights(rowMap) {
+    Object.keys(rowMap).forEach(function (key) {
+      const maxHeight = Math.max.apply(null, rowMap[key].map(function (el) {
+        return el.offsetHeight;
+      }));
+      rowMap[key].forEach(function (cell) {
+        cell.style.height = maxHeight + 'px';
+      });
+    });
+  }
+
+  /**
+   * Set all .column-header elements within a wrapper to the same height.
+   *
+   * @param {Element} wrapper - The .table-swiper-wrapper element containing headers.
+   */
+  function equalizeColumnHeaders(wrapper) {
+    const headers = wrapper.querySelectorAll('.column-header');
+    if (headers.length === 0) {
+      return;
+    }
+
+    headers.forEach(function (el) {
+      el.style.height = '';
+    });
+
+    const maxHeaderHeight = Math.max.apply(null, Array.from(headers).map(function (el) {
+      return el.offsetHeight;
+    }));
+
+    headers.forEach(function (el) {
+      el.style.height = maxHeaderHeight + 'px';
+    });
+  }
+
+  /**
+   * Sets equal heights for cells in each row across fixed and swiper columns.
+   */
+  function equalizeTableSwiperHeights() {
+    document.querySelectorAll('.table-swiper-wrapper').forEach(function (wrapper) {
+      const rowMap = {};
+
+      // Group .cell-row elements by data-row-index.
+      const cells = wrapper.querySelectorAll('.cell-row[data-row-index]');
+      cells.forEach(function (el) {
+        const index = el.getAttribute('data-row-index');
+        if (!rowMap[index]) {
+          rowMap[index] = [];
+        }
+        rowMap[index].push(el);
+      });
+
+      resetRowHeights(rowMap);
+      setMaxRowHeights(rowMap);
+      equalizeColumnHeaders(wrapper);
+    });
+  }
+
+  // Initialise each Swiper separately.
+  document.querySelectorAll('.table-swiper-wrapper .swiper').forEach(function (swiperElement) {
     const swiperWrapper = swiperElement.closest('.table-swiper-wrapper');
     const paginationEl = swiperWrapper.querySelector('.swiper-pagination');
     const nextEl = swiperWrapper.querySelector('.swiper-button-next');
@@ -34,23 +102,17 @@
       },
       on: {
         init: function () {
-          if (typeof equalizeTableSwiperHeights === 'function') {
-            equalizeTableSwiperHeights(); // eslint-disable-line no-undef
-          }
-          // fallback update after render.
+          equalizeTableSwiperHeights();
           setTimeout(() => this.update(), 100);
         },
         resize: function () {
-          if (typeof equalizeTableSwiperHeights === 'function') {
-            equalizeTableSwiperHeights(); // eslint-disable-line no-undef
-          }
+          equalizeTableSwiperHeights();
         }
       }
     });
   });
 
-  if (typeof equalizeTableSwiperHeights === 'function') {
-    window.addEventListener('load', equalizeTableSwiperHeights); // eslint-disable-line no-undef
-    window.addEventListener('resize', equalizeTableSwiperHeights); // eslint-disable-line no-undef
-  }
+  // Extra fallback for page load and window resize.
+  window.addEventListener('load', equalizeTableSwiperHeights);
+  window.addEventListener('resize', equalizeTableSwiperHeights);
 })();
