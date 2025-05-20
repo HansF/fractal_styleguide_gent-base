@@ -2,7 +2,60 @@
 'use strict';
 
 (function () {
-  
+
+  /**
+   * Reset heights for all elements in the given row map.
+   *
+   * @param {Object} rowMap - A map of data-row-index to an array of DOM elements.
+   */
+  function resetRowHeights(rowMap) {
+    Object.keys(rowMap).forEach(function (key) {
+      rowMap[key].forEach(function (cell) {
+        cell.style.height = '';
+      });
+    });
+  }
+
+  /**
+   * Set maximum height per row based on the row map.
+   *
+   * @param {Object} rowMap - A map of data-row-index to an array of DOM elements.
+   */
+  function setMaxRowHeights(rowMap) {
+    Object.keys(rowMap).forEach(function (key) {
+      const maxHeight = Math.max.apply(null, rowMap[key].map(function (el) {
+        return el.offsetHeight;
+      }));
+      rowMap[key].forEach(function (cell) {
+        cell.style.height = maxHeight + 'px';
+      });
+    });
+  }
+
+  /**
+   * Set all .column-header elements within a wrapper to the same height.
+   *
+   * @param {Element} wrapper - The .table-swiper-wrapper element containing headers.
+   */
+  function equalizeColumnHeaders(wrapper) {
+    const headers = wrapper.querySelectorAll('.column-header');
+    if (headers.length === 0) {
+      return;
+    }
+
+    headers.forEach(function (el) {
+      el.style.height = '';
+    });
+
+    const maxHeaderHeight = Math.max.apply(null, Array.from(headers).map(function (el) {
+      return el.offsetHeight;
+    }));
+
+    headers.forEach(function (el) {
+      el.style.height = maxHeaderHeight + 'px';
+    });
+  }
+
   /**
    * Sets equal heights for cells in each row across fixed and swiper columns.
    */
@@ -10,8 +63,9 @@
     document.querySelectorAll('.table-swiper-wrapper').forEach(function (wrapper) {
       const rowMap = {};
 
-      // Gather cells per data-row-index.
-      wrapper.querySelectorAll('.cell-row[data-row-index]').forEach(function (el) {
+      // Group .cell-row elements by data-row-index.
+      const cells = wrapper.querySelectorAll('.cell-row[data-row-index]');
+      cells.forEach(function (el) {
         const index = el.getAttribute('data-row-index');
         if (!rowMap[index]) {
           rowMap[index] = [];
@@ -19,35 +73,9 @@
         rowMap[index].push(el);
       });
 
-      // Reset existing heights.
-      Object.keys(rowMap).forEach(function (key) {
-        rowMap[key].forEach(function (cell) {
-          cell.style.height = '';
-        });
-      });
-
-      // Set max height per row.
-      Object.keys(rowMap).forEach(function (key) {
-        const maxHeight = Math.max.apply(null, rowMap[key].map(function (el) {
-          return el.offsetHeight;
-        }));
-        rowMap[key].forEach(function (cell) {
-          cell.style.height = maxHeight + 'px';
-        });
-      });
-
-      // Set equal heights of .column-header elements.
-      const headers = wrapper.querySelectorAll('.column-header');
-      if (headers.length > 0) {
-        // Reset hoogtes
-        headers.forEach(function (el) {
-          el.style.height = '';
-        });
-        const maxHeaderHeight = Math.max.apply(null, Array.from(headers).map(el => el.offsetHeight));
-        headers.forEach(function (el) {
-          el.style.height = maxHeaderHeight + 'px';
-        });
-      }
+      resetRowHeights(rowMap);
+      setMaxRowHeights(rowMap);
+      equalizeColumnHeaders(wrapper);
     });
   }
 
@@ -84,7 +112,7 @@
     });
   });
 
-  // Extra security with (re)loading or resize.
+  // Extra fallback for page load and window resize.
   window.addEventListener('load', equalizeTableSwiperHeights);
   window.addEventListener('resize', equalizeTableSwiperHeights);
 })();
