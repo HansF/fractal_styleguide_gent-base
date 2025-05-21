@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.14]
+
+### Added
+- HEAT-6831451: Added icons for parking, car-charger and arrows-left-right. 
+
 ## [6.0.13]
 
 ### Fixed
