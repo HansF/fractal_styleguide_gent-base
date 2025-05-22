@@ -2,6 +2,11 @@
 
 All notable changes to this style guide are documented here.
 
+## [6.0.15]
+
+### Changed
+- SGD8-3000: Changed border for responsive table to slides instead of whole table.
+
 ## [6.0.14]
 
 ### Added
@@ -296,6 +301,8 @@ Add the `.contact-details--with-image` class to the contact-details section if y
 
 
 [6.x-dev unreleased]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.x...6.x-dev
+[6.0.15]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.14...6.0.15
+[6.0.14]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.13...6.0.14
 [6.0.13]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.12...6.0.13
 [6.0.12]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.11...6.0.12
 [6.0.11]: https://github.com/StadGent/fractal_styleguide_gent-base/compare/6.0.10...6.0.11
